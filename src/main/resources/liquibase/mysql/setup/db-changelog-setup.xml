@@ -1,0 +1,70 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+   <!-- kreiraj tabelu depratment-->
+    <changeSet id="create-department" author="d.savic">
+        <sqlFile path="ddl/create-department.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+   <!-- kreiraj tabelu subject-->
+    <changeSet id="create-subject" author="d.savic">
+        <sqlFile path="ddl/create-subject.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu academic-title-->
+    <changeSet id="create-academic-title" author="nevena">
+        <sqlFile path="ddl/create-academic-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu education-title-->
+    <changeSet id="create-education-title" author="nevena">
+        <sqlFile path="ddl/create-education-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu scientific-field-->
+    <changeSet id="create-scientific-field" author="nevena">
+        <sqlFile path="ddl/create-scientific-field.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu member-->
+    <changeSet id="create-member" author="nevena">
+        <sqlFile path="ddl/create-member.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu academic-title-history-->
+    <changeSet id="create-academic-title-history" author="nevena">
+        <sqlFile path="ddl/create-academic-title-history.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu secretary-of-department-history-->
+    <changeSet id="create-secretary-of-department-history" author="nevena">
+        <sqlFile path="ddl/create-secretary-of-department-history.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- kreiraj tabelu head-of-department-history-->
+    <changeSet id="create-head-of-department-history" author="nevena">
+        <sqlFile path="ddl/create-head-of-department-history.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    
+    <!-- popuni tabelu department-->
+    <changeSet id="init-department" author="d.savic">
+        <sqlFile path="dml/init-department.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu subject-->
+    <changeSet id="init-subject" author="d.savic">
+        <sqlFile path="dml/init-subject.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu academic-title-->
+    <changeSet id="init-academic-title" author="nevena">
+        <sqlFile path="dml/init-academic-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu education-title-->
+    <changeSet id="init-education-title" author="nevena">
+        <sqlFile path="dml/init-education-title.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu scientific-field-->
+    <changeSet id="init-scientific-field" author="nevena">
+        <sqlFile path="dml/init-scientific-field.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <!-- popuni tabelu member-->
+    <changeSet id="init-member" author="nevena">
+        <sqlFile path="dml/init-member.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+    <changeSet id="init-academic-title-history" author="nevena">
+        <sqlFile path="dml/init-academic-title-history.sql" relativeToChangelogFile="true"/>
+    </changeSet>
+</databaseChangeLog>
