@@ -34,8 +34,8 @@ public class SubjectControllerTests {
 
     @Test
     public void saveSuccessTest() throws Exception {
-        SubjectDto subjectDto = new SubjectDto(10L, "test1", 4, new DepartmentDto(3L, "test1", "test1"));
-        when(subjectService.save(subjectDto)).thenReturn(subjectDto);
+        DepartmentDto departmentDto =  new DepartmentDto(3L, "IS1", "IS1");
+        SubjectDto subjectDto = new SubjectDto(10L, "sub1", 4,departmentDto);        when(subjectService.save(subjectDto)).thenReturn(subjectDto);
         mockMvc.perform(post("/subject").contentType(MediaType.APPLICATION_JSON_VALUE)
                         .content(objectMapper.writeValueAsString(subjectDto))).andExpect(status().isCreated())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON_VALUE))
